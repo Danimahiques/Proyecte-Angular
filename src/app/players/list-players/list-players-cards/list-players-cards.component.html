@@ -1,0 +1,22 @@
+
+    <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+           <img id="imagen_jugadores" src="assets/{{player.image}}">
+           
+            <ul class="list-group list-group-vertical">
+            <li class="list-group-item">Name: {{player.name | uppercase}}</li>
+              <li class="list-group-item">Country: {{player.country }}</li>
+              <li class="list-group-item">Age: {{player.age}}</li>
+              <li class="list-group-item">Ranking: {{player.ranking}}</li>
+            </ul>
+          </div>
+          <div class="card-body" [appDetails]="[mostrar1,mostrar2,mostrar3]" >
+            <li class="list-group-item" #mostrar1>Titles: {{player.titles}}</li>
+            <li class="list-group-item" #mostrar2>Weight: {{player.weight}}</li>
+             <li class="list-group-item" #mostrar3>Height: {{player.height}}</li>
+
+
+          </div>
+      
+</div>

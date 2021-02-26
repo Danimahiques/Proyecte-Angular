@@ -1,0 +1,95 @@
+<header>
+
+
+    <div class="header-peq">
+      <div class="container-headerpeq">
+        <h1>Bienvenido futura leyenda</h1><br /><br />
+        <p class="subtitulo-header">Aqui tienes un formulario de inscripcion al torneo 2021/2022<p>
+            
+      </div>
+    </div>
+    <!--cierre del div que contiene el header-->
+  </header>
+  <section>
+    <div class="main-contenedor">
+      <div class="formulario">
+        <h2 class="titulo-formulario"> Inscripcion al Torneo </h2>
+        <form id="contacto-form" [formGroup]="formGuapo">
+          <input type="hidden" name="redirect" value="http://www.opera.com" />
+          <fieldset class="datos-personales">
+            <legend class="titulos">Datos personales:</legend>
+            <hr class="linea" />
+            <ul class="datos">
+              <li>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre"   [ngClass]="{'is-valid': nameValid?.valid && nameValid?.touched,
+                'is-invalid': nameValid?.invalid && nameValid?.touched}" size="60" formControlName="name" placeholder="escribe tu nombre" id="nombre" value="" required="required" /><span class="note"></span>
+                <div *ngIf="nameValid?.touched && nameValid?.invalid" class="alert alert-danger"> 
+                  Nombre requerido.
+              </div>
+              </li>
+              <li>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" name="apellidos" [ngClass]="{'is-valid': surnameValid?.valid && surnameValid?.touched,
+                'is-invalid': surnameValid?.invalid && surnameValid?.touched}" size="60" formControlName="surname" placeholder="escribe tus apellidos" id="apellidos" value="" required="required" /><span class="note"></span>
+                <div  [ngStyle]="{'background-color': 'red' }" *ngIf="surnameValid?.touched && surnameValid?.invalid" class="alert alert-danger">El apellido debe contener Perez
+              </div>
+              </li>
+
+                <li>
+                <label for="password">Contraseña:</label>
+                <input type="password" name="password" [ngClass]="{'is-valid': passwordValid?.valid && passwordValid?.touched,
+                'is-invalid': passwordValid?.invalid && passwordValid?.touched}" size="60" formControlName="password" placeholder="escribe tu contraseña" id="password" value="" required="required" /><span class="note"></span>
+                <div *ngIf="passwordValid?.touched && passwordValid?.invalid" class="alert alert-danger">
+                  Campo constraseña requerido y deben coincidir.
+              </div>
+              </li>
+              <li>
+                <label for="confirmPassword">Confirmar Contraseña:</label>
+                <input type="password" name="confirmPassword" [ngClass]="{'is-valid': confirmPasswordValid?.valid && confirmPasswordValid?.touched,
+                'is-invalid': confirmPasswordValid?.invalid && confirmPasswordValid?.touched}" size="60" formControlName="confirmPassword" placeholder="escribe tu contraseña" id="confirmPassword" value="" required="required" /><span class="note"></span>
+                <div *ngIf="confirmPasswordValid?.touched && confirmPasswordValid?.invalid" class="alert alert-danger">
+                  Campo constraseña requerido y deben coincidir.
+
+              </div>
+              </li>
+              <li>
+                <label for="email">Email:</label>
+                <input type="text" name="email" [ngClass]="{'is-valid': emailValid?.valid && emailValid?.touched,
+                'is-invalid': emailValid?.invalid && emailValid?.touched}" formControlName="email" size="60" placeholder="escribe tu email" id="email" value="" required="required" /><span class="note"></span>
+                <div *ngIf="emailValid?.touched && emailValid?.invalid" class="alert alert-danger">
+                 Email debe ser valido
+
+              </div>
+              </li>
+              <li>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" name="telefono" [ngClass]="{'is-valid': telefonValid?.valid && telefonValid?.touched,
+                'is-invalid': telefonValid?.invalid && telefonValid?.touched}" formControlName="telefon" size="60" placeholder="escribe tu telefono" id="telefono" value="" required="required" /><span class="note"></span>
+                <div *ngIf="telefonValid?.touched && telefonValid?.invalid" class="alert alert-danger">
+                  El campo telefono debe ser puesto
+              </div>
+              </li>
+              <li>
+                <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+                <input type="text" name="fecha-nacimiento" [ngClass]="{'is-valid': birthdayValid?.valid && birthdayValid?.touched,
+                'is-invalid': birthdayValid?.invalid && birthdayValid?.touched}" size="30" formControlName="birthday" placeholder="dd/mm/aaaa" id="fecha-nacimiento" value="" required="required" /><span class="note"></span>
+                <div *ngIf="birthdayValid?.touched && birthdayValid?.invalid" class="alert alert-danger">
+                  Fecha nacimiento Valida.
+
+              </div>
+              </li>
+            </ul>
+          </fieldset><br>
+     
+            <hr />
+        
+          
+          <fieldset>
+            <input type="submit" value="Enviar" class="boton-enviar" id="enviar">
+            <br>
+            <input type="reset" name="reset" value="Borrar datos" class="boton-reset">
+          </fieldset>
+        </form>
+      </div>
+    </div>

@@ -1,0 +1,4 @@
+<h1>Jugadores Presentes En La Edicion 2021</h1>
+<input type="text" name="buscaPlayer" id="buscaPlayer" value="Busca Jugador" [(ngModel)]="criteri">
+
+<app-list-players-cards [player]='player' *ngFor='let player of players | filterName:criteri'></app-list-players-cards>

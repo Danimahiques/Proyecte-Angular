@@ -1,0 +1,116 @@
+.mainbanner {
+    background-image:     url(https://historiasdenuevayork.files.wordpress.com/2015/09/sede-us-open.jpg);
+    height: 850px;
+    background-size: 100%;
+    background-attachment:fixed;
+    top: -30px;
+    position: relative;
+    
+  /* background-position: right 0px bottom -120px; */ 
+    
+    /*Since the the banner's color pallete consists of neutral colors, and the placement of the banner and the picture within took some expirmeneting, I placed a background color behind the banner. It served as an alert if the picture got misplaced as I tried to perfectly place it. I found it to be an effective way to alert me if something went wrong with the dimensions, especially that I'm dealing mostly with whites and light colors. It's invisibile as long as the image properly takes the space I want it to take. Normally, I'd remove it after it got the job done but I kept it to engage you in my thought process
+    
+    background-color: blue; */
+  }
+  
+  .mainbanner h1 {
+    text-align: center;
+    position:relative;
+    top: 80px;
+    font-weight: 700;
+    font-size: 3.3em;
+  }
+  
+  .mainbanner h3 {
+    text-align: center;
+    position:relative;
+    font-weight: 500;
+    top: 75px;
+   
+  }
+  
+  .button {
+    text-align: center;
+    position: relative;
+    top: 700px;
+    font-weight: 400;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 150px;
+    margin:0 auto;
+    font-size: 15px;
+    background-color: #262B31;
+    padding-top:10px;
+    padding-bottom:10px;
+  
+  }
+  
+  .button:hover{
+    background-color: #F7F7F7;
+    border: .5px solid black;
+  }
+
+  .container-2 {
+    background: linear-gradient(#20396B, #2E72C7, #20396B);
+    padding: 50px;
+    padding-top: 60px;
+    height: 500px;
+    color: white;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom:45px;
+    font-weight: 700;
+  }
+   
+  iframe {
+    float: right;
+    position: relative;
+    top: 20px;
+  
+  }
+  
+  
+  .text-block   {
+    width: 600px;
+    display: inline-block;
+    float: left;
+  }
+  
+  .text-block h3{
+    font-weight: 600;
+    font-size: 3.6em;
+    line-height: 55px;
+    display: inline-block;
+  }
+  
+  .text-block p {
+    font-size:1.2em;
+    padding-top:5px;
+    display:inline-block;
+    color: #BCBCBC;
+  }
+  
+  .text-block span {
+    color: white;
+  }
+  
+  .text-block li { 
+    display:inline-block;
+    position: relative;
+    bottom: 13px;
+    padding-top: 35px;
+    font-size: 2.5em;
+    font-weight: 100;
+  }
+  
+  #item2 {
+    padding-left: 65px;
+  }
+  
+  #item3 {
+    padding-left: 130px;
+  }
+  
